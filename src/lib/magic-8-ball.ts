@@ -1,37 +1,48 @@
 import { pickRandomItem } from "../utils/pick-random-item";
 
 const positiveAnswers = [
-  "Oui",
-  "Mais à fond c'est le destin",
   "Oui. Catégorique.",
-  "Franchement fonce.",
-  "C’est écrit dans les étoiles.",
-  "Go for it",
+  "Oui",
+  "Probablement",
+  "Oui oui tkt",
+  "Pourquoi pas",
+  "Absolument.",
+  "C'est possible",
+  "C'est le destin",
 ];
 
 const negativeAnswers = [
   "Non",
-  "Peut-être",
-  "Je ne sais pas",
-  "Probablement",
   "Probablement pas",
   "Dans tes rêves",
   "Nong.",
-  "T'aimerais mais je crois pas",
-  "T'as un problème toi",
   "Sympa... mais non",
-  "Bong...",
-  "Je sais même pas quoi répondre",
   "Oui mais non",
-  "Bof",
   "Ça se complique...",
-  "Oui, mais tu ne vas pas aimer.",
   "Tout indique que non.",
-  "L’univers conspire pour toi !",
   "C'est mort, déso.",
+  "Non, jamais",
+  "Absolument pas.",
 ];
 
-export const answers = [...positiveAnswers, ...negativeAnswers];
+const neutralAnswers = [
+  "Je ne sais pas",
+  "Peut-être",
+  "Je ne sais pas",
+  "T'as un problème toi",
+  "Bong...",
+  "Bof",
+  "AH (celui de Denis Brogniart)",
+  "Une chance sur deux",
+  "Mieux vaut ne pas te le dire maintenant.",
+  "Impossible de prédire pour le moment.",
+];
+
+export const answers = [
+  ...positiveAnswers,
+  ...negativeAnswers,
+  ...neutralAnswers,
+];
 
 export function pickRandomAnswer() {
   return pickRandomItem(answers);
