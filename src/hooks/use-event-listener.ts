@@ -3,7 +3,7 @@ import { useEffect, useRef } from "preact/hooks";
 type EventCallback = () => void;
 
 export function useEventListener(callback: EventCallback) {
-  const shakeThreshold = 5;
+  const shakeThreshold = 10;
   const lastShakeTimeRef = useRef<number>(0);
 
   useEffect(() => {
