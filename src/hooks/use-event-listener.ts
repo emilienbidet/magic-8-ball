@@ -34,13 +34,13 @@ export function useEventListener(callback: EventCallback) {
       }
     };
 
-    window.addEventListener("click", handleClick);
-    window.addEventListener("keydown", handleKeydown);
+    document.addEventListener("click", handleClick);
+    document.addEventListener("keydown", handleKeydown);
     window.addEventListener("devicemotion", handleMotionEvent);
 
     return () => {
-      window.removeEventListener("click", handleClick);
-      window.removeEventListener("keydown", handleKeydown);
+      document.removeEventListener("click", handleClick);
+      document.removeEventListener("keydown", handleKeydown);
       window.removeEventListener("devicemotion", handleMotionEvent);
     };
   }, [callback]);
