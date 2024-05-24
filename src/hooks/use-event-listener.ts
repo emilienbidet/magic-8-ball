@@ -27,7 +27,7 @@ export function useEventListener(callback: EventCallback) {
 
       if (shakeMagnitude > shakeThreshold) {
         const now = Date.now();
-        if (now - lastShakeTimeRef.current > 1000) {
+        if (now - lastShakeTimeRef.current > 200) {
           lastShakeTimeRef.current = now;
           callback();
         }
