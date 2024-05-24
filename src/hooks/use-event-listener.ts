@@ -34,14 +34,14 @@ export function useEventListener(callback: EventCallback) {
       }
     };
 
-    document.addEventListener("click", handleClick);
-    document.addEventListener("keydown", handleKeydown);
-    document.addEventListener("devicemotion", handleMotionEvent);
+    window.addEventListener("click", handleClick);
+    window.addEventListener("keydown", handleKeydown);
+    window.addEventListener("devicemotion", handleMotionEvent);
 
     return () => {
-      document.removeEventListener("click", handleClick);
-      document.removeEventListener("keydown", handleKeydown);
-      document.removeEventListener("devicemotion", handleMotionEvent);
+      window.removeEventListener("click", handleClick);
+      window.removeEventListener("keydown", handleKeydown);
+      window.removeEventListener("devicemotion", handleMotionEvent);
     };
   }, [callback]);
 }
